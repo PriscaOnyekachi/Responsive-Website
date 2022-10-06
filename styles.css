@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+
+.logo{
+    color: #3e1908;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+span{
+    color:#ca7c62;
+}
+
+.nav-bar{
+    display:flex;
+}
+
+.nav-bar a{
+    color:#3e1908;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+    margin: 0 22px;
+    border-bottom: 2px solid transparent;
+    transition:all .40s ease;
+}
+
+.nav-bar a:hover{
+    color:#ca7c62;
+    border-bottom: 2px solid #ca7c62;
+}
+
+.icons{
+    display:flex;
+    align-items: center;
+}
+
+.icons a {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background: #ca7c62;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border:1px solid transparent;
+    transition:all .40s ease;
+}
+
+.icons a:last-child{
+   display:none;
+}
+
+.icons a:hover{
+    border:1px solid #ca7c62;
+    color: #3e1908;
+    background: transparent;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background: url(/image/Dog-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    padding: 0 8%;
+}
+
+.main-info h5{
+    color: #ca7c62;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+}
+
+.main-info h1{
+    margin: 15px 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #3e1908;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.main-info p{
+    margin-bottom: 3rem;
+    color: #838080;
+    font-size: 1.1rem;
+}
+
+.main-text{
+    margin-top:50px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.main-text a:hover{
+    border:2px solid #ca7c62;
+    color: #3e1908;
+    background: transparent;
+}
+
+.btn-1{
+    border: 2px solid transparent;
+    background: #ca7c62;
+    color: #3e1908;
+    box-shadow: grey 3px 3px 3px;
+    height: 30px;
+    width: 0px;
+    padding: 15px 35px;
+    border-radius: 10px;
+    transition: all .40s ease;
+}
+
+.btn-2{
+    border: 2px solid transparent;
+    background: #ca7c62;
+    color: #3e1908;
+    box-shadow: grey 3px 3px 3px;
+    height: 30px;
+    width: 0px;
+    padding: 15px 35px;
+    border-radius:10px;
+    margin-left: 10px;
+    transition: all .40s ease;
+}
+
+.left{
+    position:absolute;
+    top: 50%;
+    padding: 0 1%;
+    transform: translateY(-50%)
+}
+
+.left img{
+    display: block;
+    margin: 28px 0;
+    font-size: 25px;
+    color: #3e1908;
+    transition: all .40s ease;
+}
+
+.left img:hover{
+    transform: scaleX(1.1) translate(-5px);
+}
+
+.right{
+   position: absolute;
+   bottom:5%;
+   right: 5%;   
+}
+
+#scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:975px) {
+    .icons a:last-child{
+        display: block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        background: #3e1908;
+}
+.icons img{
+    filter: invert(100%);
+}
+
+.main-info h1{
+    font-size: 2.9rem;
+    transition: .2s;
+}
+
+.menu-icon.hamb{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+.nav-bar{
+    position: absolute;
+    top: -600px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #fbf6ef;
+    text-align: left;
+    transition: all .43 ease;
+}
+
+.nav-bar a {
+    font-size: 15px;
+    display: block;
+    padding: 0.5rem;
+    margin: 1.1rem;
+    border-bottom: none;
+    border-left: 2px solid #3e1908;
+}
+
+.nav-bar a:hover{
+    background: #3e1908;
+    color:white;
+    border-bottom: none;
+}
+
+.nav-bar.open{
+    top: 100%;
+}
+
+}
+
+@media screen and (max-width:600px) {
+    main{
+        background-position: -60px 50px;
+    }
+   
+    header{
+        padding-right: 20px;
+        padding:10px 2%;
+        transition: .2s;
+        background-color: #e6cbc2;
+    }
+
+    .logo{
+        padding-right: 15px;
+    }
+
+    .main-info h1{
+        font-size: 2.9rem;
+        transition: .2s;
+    }
+
+    .main-info h5{
+        letter-spacing: 1.5;
+      padding-bottom: 0;
+    }
+
+    .left{
+        display: none;
+    }
+}
+  
+
+@media screen  and (max-width:480px){
+
+   .btn-1{
+      padding: 10px 15px;
+   }
+    
+   .btn-2{
+    padding: 10px 15px;
+   }
+  
+}
